@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/*VARIABLES*/
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --content-bg: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --heading-white: hsl(0, 0%, 100%);
+  --paragraph-white: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+/*MAIN*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--heading-white);
+  font-family: "Inter", sans-serif;
+}
+main {
+  display: flex;
+}
+.contenido {
+  background-color: var(--content-bg);
+  padding: 60px;
+  margin-bottom: 0.5rem;
+  border-radius: 10px 0 0 10px;
+  width: 47rem;
+  height: 41rem;
+}
+.contenido h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+
+  margin-bottom: 0.75rem;
+}
+.contenido p {
+  color: var(--paragraph-white);
+  font-size: 1.7rem;
+  max-width: 50ch;
+  margin-bottom: 5rem;
+}
+.contenido ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1.2px;
+}
+.contenido ul li h3 {
+  font-size: 1.9rem;
+}
+.contenido ul li p {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+span {
+  color: var(--soft-violet);
+}
+.bg-img {
+  background-image: url(/images/image-header-desktop.jpg);
+  width: 47rem;
+  height: 41rem;
+  border-radius: 0 10px 10px 0;
+}
+.overlay {
+  background-color: hsl(277, 70%, 41%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1.4rem;
+}
+.attribution a {
+  color: var(--soft-violet);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contenido {
+    border-radius: 0 0 10px 10px;
+    height: 50rem;
+  }
+  .contenido p {
+    text-align: center;
+    letter-spacing: 1.3px;
+  }
+  .contenido ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenido ul li,
+  .contenido ul li p {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .contenido ul li {
+    margin-bottom: 4rem;
+  }
+  .bg-img,
+  .overlay {
+    border-radius: 10px 10px 0 0;
+    height: 21rem;
+  }
+  .attribution {
+    display: none;
+  }
+}
